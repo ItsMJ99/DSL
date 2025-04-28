@@ -1,0 +1,16 @@
+Download MPJ Express from sourceforge on browser
+extract it to a common place
+copy the extracted folders path 
+
+and paste it in (open terminal and type gedit ~/.bashrc) the file that opens.
+at the end of the file that opens add these two lines 
+export MPJ_HOME="/home/mj/DS/mpj-v0_44"
+export PATH=$MPJ_HOME/bin:$PATH
+
+now open terminal and type source ~./bashrc to reset your terminal variables for use
+dont forget to restart terminal
+just to confirm type mp and then press tab if u get more options you won.
+
+make sure to copy the lib folder path thats inside ur mpi folder
+javac -cp /home/mj/DS/mpj-v0_44/lib/mpi.jar:/home/mj/DS/mpj-v0_44/lib/mpj.jar MPI_Sum.java
+mpjrun.sh -np <number of parallel processes> MPI_Sum <arr ele1> <arr ele2>....... as much as you want.

@@ -1,0 +1,4 @@
+ifconfig
+javac *.javac
+java servercode vmip vmport
+java clientcode vmip vmport

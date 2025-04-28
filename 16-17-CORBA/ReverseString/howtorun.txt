@@ -1,0 +1,15 @@
+Terminal 1: (main pc)
+
+idlj -fall ReverseModule.idl
+
+javac *.java ReverseModule/*.java
+
+orbd -ORBInitialPort 8000
+
+Terminal 1: (2nd pc / main pc)
+
+java ReverseServer -ORBInitialPort 8000 -ORBInitialHost<terminal1 ipaddress / localhost>
+
+Terminal 2: 
+
+java ReverseClient -ORBInitialPort 8000 -ORBInitialHost<terminal1 ipaddress / localhost>
